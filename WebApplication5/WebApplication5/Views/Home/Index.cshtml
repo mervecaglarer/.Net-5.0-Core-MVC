@@ -1,0 +1,32 @@
+﻿@model List<WebApplication5.Models.Class>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h4>Hello, Welcome To The Book Page!</h4>
+    <br />
+    <table>
+        <tr>
+            <td>Book ID</td>
+            <td>Book Name</td>
+            <td>Book Writer</td>
+        </tr>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td> @i.BookID</td>
+                <td> @i.BookName</td>
+                <td> @i.BookWriter</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
